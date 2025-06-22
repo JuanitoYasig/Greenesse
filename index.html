@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenesse - Tu Guía Completa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌸 Greenesse</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#desarrolladores">Desarrolladores</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>Bienvenido a tu Guía de Salud</h1>
+                <p>Descubre información valiosa sobre alimentación saludable, ejercicio físico y bienestar mental para mejorar tu calidad de vida.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="topic-selector">
+                <h2>Navega a tu tema de interés</h2>
+                <select id="topicSelect" onchange="navigateToSection()">
+                    <option value="">-- Selecciona un tema --</option>
+                    <option value="alimentacion">Alimentación Saludable</option>
+                    <option value="ejercicio">Ejercicio y Actividad Física</option>
+                    <option value="bienestar">Bienestar Mental</option>
+                </select>
+            </section>
+
+            <!-- Alimentación Saludable -->
+            <section id="alimentacion" class="content-section">
+                <h2>🥗 Alimentación Saludable</h2>
+                
+                <h3>¿Qué es la Alimentación Saludable?</h3>
+                <p>Una alimentación saludable es fundamental para prevenir enfermedades cardiovasculares y mantener un buen estado de salud general. Comer de forma saludable no significa estar a dieta o dejar de comer todos los alimentos que te gustan, sino tomar decisiones inteligentes que beneficien a tu organismo.</p>
+
+                <h3>Principios Básicos</h3>
+                <ul>
+                    <li><strong>Variedad:</strong> Incluye diferentes grupos de alimentos en tu dieta diaria</li>
+                    <li><strong>Equilibrio:</strong> Consume porciones adecuadas de cada grupo alimenticio</li>
+                    <li><strong>Moderación:</strong> Evita excesos, especialmente de alimentos procesados</li>
+                    <li><strong>Frecuencia:</strong> Realiza comidas regulares a lo largo del día</li>
+                </ul>
+
+                <h3>Consejos Prácticos</h3>
+                <p>Para adoptar hábitos alimentarios más saludables, considera implementar estos consejos diarios:</p>
+                <ul>
+                    <li>Aumenta el consumo de frutas y verduras frescas</li>
+                    <li>Elige granos integrales sobre refinados</li>
+                    <li>Incluye proteínas magras en tus comidas</li>
+                    <li>Reduce el consumo de azúcares añadidos y grasas saturadas</li>
+                    <li>Mantente hidratado bebiendo suficiente agua</li>
+                    <li>Planifica tus comidas con anticipación</li>
+                </ul>
+
+                <h3>Alimentación Consciente</h3>
+                <p>La alimentación consciente implica prestar atención a lo que comes, cómo lo comes y por qué lo comes. Esta práctica puede ayudarte a desarrollar una relación más saludable con la comida y mejorar tu digestión.</p>
+
+                <h3>Beneficios a Largo Plazo</h3>
+                <p>Mantener una alimentación saludable de forma consistente puede ayudar a prevenir enfermedades crónicas como diabetes tipo 2, enfermedades cardíacas y ciertos tipos de cáncer. También contribuye a mantener un peso saludable y mejora los niveles de energía.</p>
+                
+                <div class="image-gallery">
+                    <h3 class="gallery-title">Galería de Alimentación Saludable</h3>
+                    <div class="gallery-grid">
+                        <div class="image-item">
+                            <!-- Reemplaza "ruta/bienestar1.jpg" con la ruta de tu imagen -->
+                            <img src="imagenes/tema1_1.jpg" alt="Meditación y mindfulness" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                📸 Imagen de Bienestar 1
+                            </div>
+                            <div class="image-caption">Práctica de meditación y mindfulness</div>
+                        </div>
+                        <div class="image-item">
+                            <!-- Reemplaza "ruta/bienestar2.jpg" con la ruta de tu imagen -->
+                            <img src="imagenes/tema1_2.jpg" alt="Relajación en la naturaleza" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                📸 Imagen de Bienestar 2
+                            </div>
+                            <div class="image-caption">Conexión con la naturaleza para el bienestar</div>
+                        </div>
+                        <div class="image-item">
+                            <!-- Reemplaza "ruta/bienestar3.jpg" con la ruta de tu imagen -->
+                            <img src="imagenes/tema1_2.png" alt="Técnicas de relajación" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                📸 Imagen de Bienestar 3
+                            </div>
+                            <div class="image-caption">Técnicas de relajación y manejo del estrés</div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Ejercicio y Actividad Física -->
+            <section id="ejercicio" class="content-section">
+                <h2>🏃‍♀️ Ejercicio y Actividad Física</h2>
+                
+                <h3>Beneficios del Ejercicio</h3>
+                <p>La actividad física regular es una recomendación establecida para prevenir y tratar los principales factores de riesgo cardiovascular. El ejercicio puede beneficiar al organismo de múltiples maneras, contribuyendo al mantenimiento de un peso corporal saludable y mejorando la salud general.</p>
+
+                <h3>Beneficios Cardiovasculares</h3>
+                <ul>
+                    <li><strong>Fortalece el corazón:</strong> Mejora la capacidad de bombeo del corazón</li>
+                    <li><strong>Reduce la presión arterial:</strong> Ayuda a controlar la hipertensión</li>
+                    <li><strong>Mejora la circulación:</strong> Aumenta el flujo sanguíneo en todo el cuerpo</li>
+                    <li><strong>Controla el colesterol:</strong> Reduce los niveles de colesterol malo (LDL)</li>
+                    <li><strong>Previene la diabetes:</strong> Mejora el control de la glucosa en sangre</li>
+                </ul>
+
+                <h3>Tipos de Ejercicio Cardiovascular</h3>
+                <ul>
+                    <li><strong>Caminar a paso rápido:</strong> Ideal para principiantes, mejora la circulación</li>
+                    <li><strong>Correr o trotar:</strong> Incrementa la capacidad pulmonar y fortalece el corazón</li>
+                    <li><strong>Montar en bicicleta:</strong> Ejercicio de bajo impacto para las articulaciones</li>
+                    <li><strong>Nadar:</strong> Ejercicio completo que trabaja todo el cuerpo</li>
+                    <li><strong>Bailar:</strong> Actividad divertida que combina ejercicio y entretenimiento</li>
+                </ul>
+
+                <h3>Recomendaciones</h3>
+                <p>Para obtener beneficios significativos para la salud cardiovascular, se recomienda realizar al menos 150 minutos de actividad física moderada por semana, o 75 minutos de actividad vigorosa. Es importante comenzar gradualmente y aumentar la intensidad progresivamente.</p>
+
+                <h3>Beneficios Adicionales</h3>
+                <p>Además de los beneficios cardiovasculares, el ejercicio regular también mejora la salud mental, reduce el estrés, aumenta la autoestima y mejora la calidad del sueño. También fortalece los huesos y músculos, y puede ayudar a prevenir caídas en adultos mayores.</p>
+
+                <h3>Cómo Comenzar</h3>
+                <p>Si eres principiante, comienza con actividades de baja intensidad como caminar 10-15 minutos al día. Gradualmente aumenta la duración y intensidad. Es importante consultar con un profesional de la salud antes de comenzar cualquier programa de ejercicio, especialmente si tienes condiciones médicas preexistentes.</p>
+                
+                <div class="image-gallery">
+                    <h3 class="gallery-title">Galería de Ejercicio y Actividad Física</h3>
+                    <div class="gallery-grid">
+                        <div class="image-item">
+                            <!-- Reemplaza "ruta/bienestar1.jpg" con la ruta de tu imagen -->
+                            <img src="imagenes/tema2_1.webp" alt="Meditación y mindfulness" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                📸 Imagen de Bienestar 1
+                            </div>
+                            <div class="image-caption">Práctica de meditación y mindfulness</div>
+                        </div>
+                        <div class="image-item">
+                            <!-- Reemplaza "ruta/bienestar2.jpg" con la ruta de tu imagen -->
+                            <img src="imagenes/tema2_2.jpg" alt="Relajación en la naturaleza" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                📸 Imagen de Bienestar 2
+                            </div>
+                            <div class="image-caption">Conexión con la naturaleza para el bienestar</div>
+                        </div>
+                        <div class="image-item">
+                            <!-- Reemplaza "ruta/bienestar3.jpg" con la ruta de tu imagen -->
+                            <img src="imagenes/tema2_3.jpg" alt="Técnicas de relajación" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                📸 Imagen de Bienestar 3
+                            </div>
+                            <div class="image-caption">Técnicas de relajación y manejo del estrés</div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Bienestar Mental -->
+            <section id="bienestar" class="content-section">
+                <h2>🧠 Bienestar Mental</h2>
+                
+                <h3>Importancia del Bienestar Mental</h3>
+                <p>El bienestar mental es fundamental para una vida plena y saludable. Está estrechamente relacionado con la salud física y puede influir significativamente en nuestras decisiones alimentarias y hábitos de ejercicio.</p>
+
+                <h3>Estrategias para Mejorar el Bienestar Mental</h3>
+                <ul>
+                    <li><strong>Mindfulness y meditación:</strong> Practicar la atención plena para reducir el estrés</li>
+                    <li><strong>Alimentación consciente:</strong> Hacer de cada comida una experiencia mindful</li>
+                    <li><strong>Ejercicio regular:</strong> La actividad física libera endorfinas que mejoran el estado de ánimo</li>
+                    <li><strong>Sueño de calidad:</strong> Mantener un horario de sueño regular</li>
+                    <li><strong>Conexiones sociales:</strong> Mantener relaciones saludables y significativas</li>
+                    <li><strong>Manejo del estrés:</strong> Desarrollar técnicas efectivas para gestionar el estrés</li>
+                </ul>
+
+                <h3>Relación entre Mente y Cuerpo</h3>
+                <p>Existe una conexión profunda entre la salud mental y física. El estrés crónico puede afectar negativamente la salud cardiovascular, mientras que una buena alimentación y ejercicio regular pueden mejorar significativamente el estado de ánimo y la función cognitiva.</p>
+
+                <h3>Técnicas de Relajación</h3>
+                <ul>
+                    <li>Respiración profunda y controlada</li>
+                    <li>Relajación muscular progresiva</li>
+                    <li>Visualización guiada</li>
+                    <li>Yoga y tai chi</li>
+                    <li>Escritura terapéutica</li>
+                </ul>
+
+                <h3>Construyendo Resiliencia</h3>
+                <p>La resiliencia es la capacidad de adaptarse y recuperarse de las adversidades. Se puede desarrollar a través de la práctica de técnicas de manejo del estrés, manteniendo una perspectiva positiva, y construyendo una red de apoyo sólida.</p>
+
+                <h3>Cuándo Buscar Ayuda</h3>
+                <p>Es importante reconocer cuándo es necesario buscar ayuda profesional. Si experimentas síntomas persistentes de ansiedad, depresión o estrés que interfieren con tu vida diaria, considera consultar con un profesional de la salud mental.</p>
+
+                <h3>Autocuidado Diario</h3>
+                <p>El autocuidado no es un lujo, sino una necesidad. Incluye actividades simples como tomar descansos regulares, practicar gratitud, dedicar tiempo a hobbies que disfrutes, y establecer límites saludables en tu vida personal y profesional.</p>
+                
+                <div class="image-gallery">
+                    <h3 class="gallery-title">Galería de Bienestar Mental</h3>
+                    <div class="gallery-grid">
+                        <div class="image-item">
+                            <!-- Reemplaza "ruta/bienestar1.jpg" con la ruta de tu imagen -->
+                            <img src="imagenes/tema3_1.webp" alt="Meditación y mindfulness" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                📸 Imagen de Bienestar 1
+                            </div>
+                            <div class="image-caption">Práctica de meditación y mindfulness</div>
+                        </div>
+                        <div class="image-item">
+                            <!-- Reemplaza "ruta/bienestar2.jpg" con la ruta de tu imagen -->
+                            <img src="imagenes/tema3_2.webp" alt="Relajación en la naturaleza" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                📸 Imagen de Bienestar 2
+                            </div>
+                            <div class="image-caption">Conexión con la naturaleza para el bienestar</div>
+                        </div>
+                        <div class="image-item">
+                            <!-- Reemplaza "ruta/bienestar3.jpg" con la ruta de tu imagen -->
+                            <img src="imagenes/tema3_3.png" alt="Técnicas de relajación" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                📸 Imagen de Bienestar 3
+                            </div>
+                            <div class="image-caption">Técnicas de relajación y manejo del estrés</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="desarrolladores" class="developers">
+            <div class="container">
+                <h2 style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Nuestro Equipo de Desarrolladores</h2>
+                <div class="developers-grid">
+                    <div class="developer-card">
+                        <div class="developer-avatar">DA</div>
+                        <h3>Nombre 1</h3>
+                        <p><strong>Especialista en Nutrición</strong></p>
+                        <p>Doctora en Ciencias de la Nutrición con 10 años de experiencia en el desarrollo de programas de alimentación saludable. Especializada en nutrición cardiovascular y prevención de enfermedades crónicas.</p>
+                        <p><em>Certificaciones: Nutrición Clínica, Dietética Avanzada</em></p>
+                    </div>
+                    <div class="developer-card">
+                        <div class="developer-avatar">CG</div>
+                        <h3>Nombre 1</h3>
+                        <p><strong>Médico Deportivo</strong></p>
+                        <p>Especialista en medicina deportiva y rehabilitación. Experto en el diseño de programas de ejercicio para la prevención cardiovascular y mejora del rendimiento físico en población general.</p>
+                        <p><em>Certificaciones: Medicina del Deporte, Cardiología Preventiva</em></p>
+                    </div>
+                    <div class="developer-card">
+                        <div class="developer-avatar">LR</div>
+                        <h3>Nombre 1</h3>
+                        <p><strong>Psicóloga de la Salud</strong></p>
+                        <p>Psicóloga especializada en salud mental y bienestar emocional. Experta en técnicas de mindfulness y manejo del estrés para mejorar la calidad de vida y promover hábitos saludables.</p>
+                        <p><em>Certificaciones: Psicología Clínica, Terapia Cognitivo-Conductual</em></p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-form">
+            <div class="container">
+                <h2 style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Contáctanos</h2>
+                <div class="form-container">
+                    <form id="contactForm" onsubmit="sendEmail(event)">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono (opcional):</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="tema">Tema de Consulta:</label>
+                            <select id="tema" name="tema" required>
+                                <option value="">-- Selecciona un tema --</option>
+                                <option value="alimentacion">Alimentación Saludable</option>
+                                <option value="ejercicio">Ejercicio y Actividad Física</option>
+                                <option value="bienestar">Bienestar Mental</option>
+                                <option value="general">Consulta General</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu consulta o mensaje aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>📞 Teléfono:</strong> 0967212283</p>
+                <p><strong>📧 Email:</strong> jcyasig2@espe.edu.ec</p>
+                <p><strong>📍 Ubicación:</strong> Santo Domingo de los Tsáchilas, Ecuador</p>
+            </div>
+            <p>&copy; 2025 Greenesse. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function navigateToSection() {
+            const select = document.getElementById('topicSelect');
+            
+            if (select.value) {
+                const targetSection = document.getElementById(select.value);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        }
+
+        function sendEmail(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const tema = document.getElementById('tema').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            const subject = `Consulta sobre ${tema} - ${nombre}`;
+            const body = `
+                Nombre: ${nombre}
+                Email: ${email}
+                Teléfono: ${telefono || 'No proporcionado'}
+                Tema: ${tema}
+
+                Mensaje:
+                ${mensaje}
+
+                ---
+                Enviado desde el formulario de contacto de Greenesse
+            `;
+            
+            const mailtoLink = `mailto:jcyasig2@espe.edu.ec?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.location.href = mailtoLink;
+            
+            // Mostrar mensaje de confirmación
+            alert('Se abrirá tu cliente de correo para enviar el mensaje. Si no se abre automáticamente, copia la información y envíala manualmente a jcyasig2@espe.edu.ec');
+            
+            // Opcional: limpiar el formulario
+            document.getElementById('contactForm').reset();
+        }
+
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Efecto de fade-in para las secciones
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-section, .developer-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
