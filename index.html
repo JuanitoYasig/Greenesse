@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenesse - Tu Guía Completa</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS (incluye Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
 </head>
 <body>
     <header>
@@ -35,6 +42,44 @@
                     <option value="ejercicio">Ejercicio y Actividad Física</option>
                     <option value="bienestar">Bienestar Mental</option>
                 </select>
+            </section>
+
+            <section>
+                <div class="image-gallery">
+                    <h3 class="gallery-title">Galería: Alimentación Saludable</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            
+                            <div class="gallery-image">
+                                <img src="imagenes/imagenesPrincipal1.jpeg" alt="Meditación y mindfulness" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Salud del corazón</h4>
+                                <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#modalPrimero">Ver más</button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="imagenes/imagenesPrincipal2.jpeg" alt="Meditación y mindfulness" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Presion arterial alta</h4>
+                                <button class="gallery-btn" onclick="openModal2()">Ver más</button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="imagenes/imagenesPrincipal3.jpeg" alt="Meditación y mindfulness" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            </div>
+                            <div class="gallery-content">
+                                <h4>Recetas</h4>
+                                <button class="gallery-btn" onclick="openModa3()">Ver más</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <!-- Alimentación Saludable -->
@@ -304,6 +349,25 @@
             </div>
         </section>
     </main>
+    <!-- Modal -->
+<div class="modal fade" id="modalPrimero" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tituloModal">Título del Modal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Este es el contenido de la modal.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <footer>
         <div class="footer-content">
@@ -317,89 +381,7 @@
     </footer>
 
     <script>
-        function navigateToSection() {
-            const select = document.getElementById('topicSelect');
-            
-            if (select.value) {
-                const targetSection = document.getElementById(select.value);
-                if (targetSection) {
-                    targetSection.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        }
-
-        function sendEmail(event) {
-            event.preventDefault();
-            
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const telefono = document.getElementById('telefono').value;
-            const tema = document.getElementById('tema').value;
-            const mensaje = document.getElementById('mensaje').value;
-            
-            const subject = `Consulta sobre ${tema} - ${nombre}`;
-            const body = `
-                Nombre: ${nombre}
-                Email: ${email}
-                Teléfono: ${telefono || 'No proporcionado'}
-                Tema: ${tema}
-
-                Mensaje:
-                ${mensaje}
-
-                ---
-                Enviado desde el formulario de contacto de Greenesse
-            `;
-            
-            const mailtoLink = `mailto:jcyasig2@espe.edu.ec?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            window.location.href = mailtoLink;
-            
-            // Mostrar mensaje de confirmación
-            alert('Se abrirá tu cliente de correo para enviar el mensaje. Si no se abre automáticamente, copia la información y envíala manualmente a jcyasig2@espe.edu.ec');
-            
-            // Opcional: limpiar el formulario
-            document.getElementById('contactForm').reset();
-        }
-
-        // Smooth scrolling para los enlaces de navegación
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Efecto de fade-in para las secciones
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.content-section, .developer-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
+        
     </script>
 </body>
 </html>
