@@ -402,6 +402,33 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            function sendEmail(event) {
+              event.preventDefault();
+          
+              // Obtener valores del formulario
+              const nombre = document.getElementById("nombre").value;
+              const email = document.getElementById("email").value;
+              const telefono = document.getElementById("telefono").value || "No proporcionado";
+              const tema = document.getElementById("tema").value;
+              const mensaje = document.getElementById("mensaje").value;
+          
+              // Crear mensaje para WhatsApp
+              const texto = `Hola, me gustaría hacer una consulta:\n\n*Nombre:* ${nombre}\n*Email:* ${email}\n*Teléfono:* ${telefono}\n*Tema:* ${tema}\n*Mensaje:* ${mensaje}`;
+          
+              // Número de WhatsApp destino (pon tu número aquí con código país, sin espacios, sin "+")
+              const numeroWhatsApp = "593962565415"; // Cambia por el tuyo
+          
+              // Crear enlace con texto codificado
+              const enlace = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+          
+              // Redireccionar a WhatsApp
+              window.open(enlace, "_blank");
+            }
+          </script>
+          
+
     </main>
     <!-- Modal 1: Salud del Corazón -->
     <div class="modal fade" id="modalPrimero" tabindex="-1" aria-labelledby="tituloModal1" aria-hidden="true">
